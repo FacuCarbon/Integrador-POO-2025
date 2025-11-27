@@ -70,7 +70,7 @@
             // 
             MenuItem_salir.Name = "MenuItem_salir";
             MenuItem_salir.ShortcutKeys = Keys.Alt | Keys.F4;
-            MenuItem_salir.Size = new Size(180, 22);
+            MenuItem_salir.Size = new Size(138, 22);
             MenuItem_salir.Text = "Salir";
             // 
             // tab_principal

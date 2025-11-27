@@ -1,6 +1,6 @@
 ﻿namespace Integrador
 {
-    partial class Form_crear_vendedor
+    partial class Form_crear_cliente
     {
         /// <summary>
         /// Required designer variable.
@@ -31,16 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_crear_cliente));
             label1 = new Label();
             label_vendedor_nombre = new Label();
-            input_vendedor_nombre = new TextBox();
-            input_vendedor_apellido = new TextBox();
+            input_cliente_nombre = new TextBox();
+            input_cliente_apellido = new TextBox();
             label_vendedor_apellido = new Label();
-            input_vendedor_dni = new TextBox();
-            label_vendedor_dni = new Label();
             label_vendedor_cuit = new Label();
-            input_vendedor_cuit = new MaskedTextBox();
+            input_cliente_cuit = new MaskedTextBox();
             button_guardar = new Button();
             button_reset = new Button();
             button_cancelar = new Button();
+            input_cliente_email = new TextBox();
+            label2 = new Label();
+            label3 = new Label();
+            input_cliente_direccion = new TextBox();
+            label4 = new Label();
+            input_cliente_telefono = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -51,9 +55,9 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(45, 22);
             label1.Name = "label1";
-            label1.Size = new Size(233, 32);
+            label1.Size = new Size(200, 32);
             label1.TabIndex = 1;
-            label1.Text = "Registrar vendedor";
+            label1.Text = "Registrar cliente";
             // 
             // label_vendedor_nombre
             // 
@@ -67,25 +71,25 @@
             label_vendedor_nombre.TabIndex = 2;
             label_vendedor_nombre.Text = "Nombre";
             // 
-            // input_vendedor_nombre
+            // input_cliente_nombre
             // 
-            input_vendedor_nombre.CharacterCasing = CharacterCasing.Upper;
-            input_vendedor_nombre.Location = new Point(54, 116);
-            input_vendedor_nombre.Margin = new Padding(5);
-            input_vendedor_nombre.Name = "input_vendedor_nombre";
-            input_vendedor_nombre.PlaceholderText = "Nombre del vendedor...";
-            input_vendedor_nombre.Size = new Size(186, 23);
-            input_vendedor_nombre.TabIndex = 12;
+            input_cliente_nombre.CharacterCasing = CharacterCasing.Upper;
+            input_cliente_nombre.Location = new Point(54, 116);
+            input_cliente_nombre.Margin = new Padding(5);
+            input_cliente_nombre.Name = "input_cliente_nombre";
+            input_cliente_nombre.PlaceholderText = "Nombre del cliente...";
+            input_cliente_nombre.Size = new Size(186, 23);
+            input_cliente_nombre.TabIndex = 12;
             // 
-            // input_vendedor_apellido
+            // input_cliente_apellido
             // 
-            input_vendedor_apellido.CharacterCasing = CharacterCasing.Upper;
-            input_vendedor_apellido.Location = new Point(291, 116);
-            input_vendedor_apellido.Margin = new Padding(5);
-            input_vendedor_apellido.Name = "input_vendedor_apellido";
-            input_vendedor_apellido.PlaceholderText = "Apellido del vendedor...";
-            input_vendedor_apellido.Size = new Size(186, 23);
-            input_vendedor_apellido.TabIndex = 14;
+            input_cliente_apellido.CharacterCasing = CharacterCasing.Upper;
+            input_cliente_apellido.Location = new Point(291, 116);
+            input_cliente_apellido.Margin = new Padding(5);
+            input_cliente_apellido.Name = "input_cliente_apellido";
+            input_cliente_apellido.PlaceholderText = "Apellido del cliente...";
+            input_cliente_apellido.Size = new Size(186, 23);
+            input_cliente_apellido.TabIndex = 14;
             // 
             // label_vendedor_apellido
             // 
@@ -99,47 +103,25 @@
             label_vendedor_apellido.TabIndex = 13;
             label_vendedor_apellido.Text = "Apellido";
             // 
-            // input_vendedor_dni
-            // 
-            input_vendedor_dni.Location = new Point(54, 195);
-            input_vendedor_dni.Margin = new Padding(5);
-            input_vendedor_dni.MaxLength = 8;
-            input_vendedor_dni.Name = "input_vendedor_dni";
-            input_vendedor_dni.PlaceholderText = "Dni del vendedor...";
-            input_vendedor_dni.Size = new Size(186, 23);
-            input_vendedor_dni.TabIndex = 16;
-            // 
-            // label_vendedor_dni
-            // 
-            label_vendedor_dni.AutoSize = true;
-            label_vendedor_dni.BackColor = Color.Transparent;
-            label_vendedor_dni.Font = new Font("Arial Black", 11.25F, FontStyle.Bold);
-            label_vendedor_dni.ForeColor = Color.White;
-            label_vendedor_dni.Location = new Point(51, 168);
-            label_vendedor_dni.Name = "label_vendedor_dni";
-            label_vendedor_dni.Size = new Size(41, 22);
-            label_vendedor_dni.TabIndex = 15;
-            label_vendedor_dni.Text = "DNI";
-            // 
             // label_vendedor_cuit
             // 
             label_vendedor_cuit.AutoSize = true;
             label_vendedor_cuit.BackColor = Color.Transparent;
             label_vendedor_cuit.Font = new Font("Arial Black", 11.25F, FontStyle.Bold);
             label_vendedor_cuit.ForeColor = Color.White;
-            label_vendedor_cuit.Location = new Point(289, 168);
+            label_vendedor_cuit.Location = new Point(48, 165);
             label_vendedor_cuit.Name = "label_vendedor_cuit";
             label_vendedor_cuit.Size = new Size(44, 22);
             label_vendedor_cuit.TabIndex = 17;
             label_vendedor_cuit.Text = "Cuit";
             // 
-            // input_vendedor_cuit
+            // input_cliente_cuit
             // 
-            input_vendedor_cuit.Location = new Point(295, 195);
-            input_vendedor_cuit.Mask = "99-99999999-9";
-            input_vendedor_cuit.Name = "input_vendedor_cuit";
-            input_vendedor_cuit.Size = new Size(186, 23);
-            input_vendedor_cuit.TabIndex = 18;
+            input_cliente_cuit.Location = new Point(54, 190);
+            input_cliente_cuit.Mask = "99-99999999-9";
+            input_cliente_cuit.Name = "input_cliente_cuit";
+            input_cliente_cuit.Size = new Size(186, 23);
+            input_cliente_cuit.TabIndex = 18;
             // 
             // button_guardar
             // 
@@ -148,7 +130,7 @@
             button_guardar.FlatStyle = FlatStyle.Flat;
             button_guardar.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold);
             button_guardar.ForeColor = Color.White;
-            button_guardar.Location = new Point(391, 274);
+            button_guardar.Location = new Point(391, 340);
             button_guardar.Name = "button_guardar";
             button_guardar.Size = new Size(90, 35);
             button_guardar.TabIndex = 27;
@@ -163,7 +145,7 @@
             button_reset.FlatStyle = FlatStyle.Flat;
             button_reset.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button_reset.ForeColor = Color.White;
-            button_reset.Location = new Point(225, 274);
+            button_reset.Location = new Point(225, 340);
             button_reset.Name = "button_reset";
             button_reset.Size = new Size(90, 35);
             button_reset.TabIndex = 26;
@@ -178,7 +160,7 @@
             button_cancelar.FlatStyle = FlatStyle.Flat;
             button_cancelar.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold);
             button_cancelar.ForeColor = Color.White;
-            button_cancelar.Location = new Point(54, 274);
+            button_cancelar.Location = new Point(54, 340);
             button_cancelar.Name = "button_cancelar";
             button_cancelar.Size = new Size(90, 35);
             button_cancelar.TabIndex = 25;
@@ -186,29 +168,100 @@
             button_cancelar.UseVisualStyleBackColor = false;
             button_cancelar.Click += button_cancelar_Click;
             // 
-            // Form_crear_vendedor
+            // input_cliente_email
+            // 
+            input_cliente_email.CharacterCasing = CharacterCasing.Upper;
+            input_cliente_email.Location = new Point(291, 190);
+            input_cliente_email.Margin = new Padding(5);
+            input_cliente_email.MaxLength = 30;
+            input_cliente_email.Name = "input_cliente_email";
+            input_cliente_email.PlaceholderText = "Email del cliente...";
+            input_cliente_email.Size = new Size(186, 23);
+            input_cliente_email.TabIndex = 29;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Arial Black", 11.25F, FontStyle.Bold);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(288, 163);
+            label2.Name = "label2";
+            label2.Size = new Size(56, 22);
+            label2.TabIndex = 28;
+            label2.Text = "Email";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Arial Black", 11.25F, FontStyle.Bold);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(51, 242);
+            label3.Name = "label3";
+            label3.Size = new Size(81, 22);
+            label3.TabIndex = 30;
+            label3.Text = "Telefono";
+            // 
+            // input_cliente_direccion
+            // 
+            input_cliente_direccion.CharacterCasing = CharacterCasing.Upper;
+            input_cliente_direccion.Location = new Point(291, 269);
+            input_cliente_direccion.Margin = new Padding(5);
+            input_cliente_direccion.Name = "input_cliente_direccion";
+            input_cliente_direccion.PlaceholderText = "Dirección del cliente...";
+            input_cliente_direccion.Size = new Size(186, 23);
+            input_cliente_direccion.TabIndex = 33;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Arial Black", 11.25F, FontStyle.Bold);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(288, 242);
+            label4.Name = "label4";
+            label4.Size = new Size(89, 22);
+            label4.TabIndex = 32;
+            label4.Text = "Dirección";
+            // 
+            // input_cliente_telefono
+            // 
+            input_cliente_telefono.Location = new Point(54, 269);
+            input_cliente_telefono.MaxLength = 15;
+            input_cliente_telefono.Name = "input_cliente_telefono";
+            input_cliente_telefono.PlaceholderText = "Telefono del cliente...";
+            input_cliente_telefono.Size = new Size(186, 23);
+            input_cliente_telefono.TabIndex = 34;
+            input_cliente_telefono.KeyPress += input_cliente_telefono_KeyPress;
+            // 
+            // Form_crear_cliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background2;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(544, 339);
+            ClientSize = new Size(544, 438);
+            Controls.Add(input_cliente_telefono);
+            Controls.Add(input_cliente_direccion);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(input_cliente_email);
+            Controls.Add(label2);
             Controls.Add(button_guardar);
             Controls.Add(button_reset);
             Controls.Add(button_cancelar);
-            Controls.Add(input_vendedor_cuit);
+            Controls.Add(input_cliente_cuit);
             Controls.Add(label_vendedor_cuit);
-            Controls.Add(input_vendedor_dni);
-            Controls.Add(label_vendedor_dni);
-            Controls.Add(input_vendedor_apellido);
+            Controls.Add(input_cliente_apellido);
             Controls.Add(label_vendedor_apellido);
-            Controls.Add(input_vendedor_nombre);
+            Controls.Add(input_cliente_nombre);
             Controls.Add(label_vendedor_nombre);
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form_crear_vendedor";
+            Name = "Form_crear_cliente";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Insumos de computación - Agregar nuevo vendedor";
+            Text = "Insumos de computación - Agregar nuevo cliente";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -217,15 +270,19 @@
 
         private Label label1;
         private Label label_vendedor_nombre;
-        private TextBox input_vendedor_nombre;
-        private TextBox input_vendedor_apellido;
+        private TextBox input_cliente_nombre;
+        private TextBox input_cliente_apellido;
         private Label label_vendedor_apellido;
-        private TextBox input_vendedor_dni;
-        private Label label_vendedor_dni;
         private Label label_vendedor_cuit;
-        private MaskedTextBox input_vendedor_cuit;
+        private MaskedTextBox input_cliente_cuit;
         private Button button_guardar;
         private Button button_reset;
         private Button button_cancelar;
+        private TextBox input_cliente_email;
+        private Label label2;
+        private Label label3;
+        private TextBox input_cliente_direccion;
+        private Label label4;
+        private TextBox input_cliente_telefono;
     }
 }

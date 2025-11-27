@@ -25,6 +25,8 @@ namespace Integrador
 
         private void button_login_Click(object sender, EventArgs e)
         {
+            button_login.Text = "Cargando...";
+            button_login.Enabled = false;
             string usernameInput = input_username.Text.Trim();
             string passwordInput = input_password.Text.Trim();
 
@@ -34,26 +36,38 @@ namespace Integrador
                 return;
             }
 
-            DALUsuario dal = new DALUsuario();
-            Usuario? usuario = dal.Login(usernameInput, passwordInput);
-
-            if (usuario == null)
+            try
             {
-                intentos--;
-                MessageBox.Show("Credenciales incorrectas. Te quedan " + intentos + " intentos.", "Credenciales invalidas", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                if (intentos == 0)
+                DALUsuario dal = new DALUsuario();
+                Usuario? usuario = dal.Login(usernameInput, passwordInput);
+
+                if (usuario == null)
                 {
-                    MessageBox.Show("Su cuenta fue bloqueada por seguridad. Contactese con soporte.", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Close();
+                    intentos--;
+                    MessageBox.Show("Credenciales incorrectas. Te quedan " + intentos + " intentos.", "Credenciales invalidas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (intentos == 0)
+                    {
+                        MessageBox.Show("Su cuenta fue bloqueada por seguridad. Contactese con soporte.", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Close();
+                    }
+                }
+                else
+                {
+                    Sesion.UsuarioActual = usuario;
+                    MessageBox.Show($"¡Bienvenido de nuevo {usuario?.ApellyNom}!", "Login exitoso", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    Form_principal formPrincipal = new Form_principal();
+                    formPrincipal.Show();
+                    this.Hide();
                 }
             }
-            else
+            catch (Exception error)
             {
-                Sesion.UsuarioActual = usuario;
-                MessageBox.Show($"¡Bienvenido de nuevo {usuario?.ApellyNom}!", "Login exitoso", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                Form_principal formPrincipal = new Form_principal();
-                formPrincipal.Show();
-                this.Hide();
+                MessageBox.Show($"Estamos teniendo problemas técnicos. Por favor comuniquese con soporte y solicite un ticket. \nIndique como asunto el siguiente error:\n {error}", "Error de sistema.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                button_login.Text = "Login";
+                button_login.Enabled = true;
             }
         }
 

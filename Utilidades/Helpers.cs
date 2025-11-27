@@ -37,6 +37,15 @@ namespace Integrador.Utilidades
             }
         }
 
+        public static void SoloNumeros(object sender, KeyPressEventArgs e)
+        {
+           
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; 
+            }
+        }
+
         public static void ToggleContraseña(TextBox controlContraseña, Button buttonToggle)
         {
             bool mostrar_contraseña = controlContraseña.PasswordChar == '•' ? false : true;

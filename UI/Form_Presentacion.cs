@@ -12,6 +12,7 @@ namespace Integrador
             listado_productos.BotonCrearClick += ListadoProductos_BotonCrearClick;
             listado_vendedores.BotonCrearClick += ListadoVendedores_BotonCrearClick;
             listado_clientes.BotonCrearClick += ListadoClientes_BotonCrearClick;
+
             listado_empresas.BotonCrearClick += ListadoEmpresas_BotonCrearClick;
 
             listado_productos.EditarClick += EditarProducto;
@@ -19,6 +20,12 @@ namespace Integrador
 
             listado_vendedores.EditarClick += EditarVendedor;
             listado_vendedores.EliminarClick += EliminarVendedor;
+
+            listado_clientes.EditarClick += EditarCliente;
+            listado_clientes.EliminarClick += EliminarCliente;
+
+            listado_empresas.EditarClick += EditarEmpresa;
+            listado_empresas.EliminarClick += EliminarEmpresa;
 
             listado_productos.TextoBusquedaChanged += ListadoProductos_TextoBusquedaChanged;
             listado_vendedores.TextoBusquedaChanged += ListadoVendedores_TextoBusquedaChanged;
@@ -62,12 +69,6 @@ namespace Integrador
                 Helpers.CargarProductos(listado_productos.Grid, null);
             }
         }
-
-        private void ListadoEmpresas_BotonCrearClick(object? sender, EventArgs e)
-        { }
-
-        private void ListadoClientes_BotonCrearClick(object? sender, EventArgs e)
-        { }
 
         private void EditarProducto(int id)
         {
@@ -145,6 +146,17 @@ namespace Integrador
         }
 
         ///////////////////////////////
+
+        private void ListadoClientes_BotonCrearClick(object? sender, EventArgs e)
+        {
+            Form_crear_cliente form_crear_cliente = new Form_crear_cliente();
+
+            if (form_crear_cliente.ShowDialog(this) == DialogResult.OK)
+            {
+                Helpers.CargarClientes(listado_clientes.Grid, null);
+            }
+        }
+
         private void ListadoClientes_TextoBusquedaChanged(object? sender, EventArgs e)
         {
             string query = listado_clientes.TextoBusqueda;
@@ -155,7 +167,43 @@ namespace Integrador
             );
         }
 
+        private void EditarCliente(int id)
+        {
+            using (var form = new Form_editar_cliente(id))
+            {
+                if (form.ShowDialog(this) == DialogResult.OK)
+                {
+                    Helpers.CargarClientes(listado_clientes.Grid, null);
+                }
+            }
+        }
+
+        private void EliminarCliente(int id)
+        {
+            if (MessageBox.Show(
+                "¿Seguro que querés eliminar este cliente?",
+                "Confirmar eliminación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                DALCliente dal = new DALCliente();
+                dal.EliminarCliente(id);
+                Helpers.CargarClientes(listado_clientes.Grid, null);
+            }
+        }
+
         ///////////////////////////////
+
+        private void ListadoEmpresas_BotonCrearClick(object? sender, EventArgs e)
+        {
+            Form_crear_empresa form_crear_empresa = new Form_crear_empresa();
+
+            if (form_crear_empresa.ShowDialog(this) == DialogResult.OK)
+            {
+                Helpers.CargarEmpresas(listado_empresas.Grid, null);
+            }
+        }
+
         private void ListadoEmpresas_TextoBusquedaChanged(object? sender, EventArgs e)
         {
             string query = listado_empresas.TextoBusqueda;
@@ -164,6 +212,31 @@ namespace Integrador
                 listado_empresas.Grid,
                 !string.IsNullOrWhiteSpace(query) && query.Length >= 3 ? query : null
             );
+        }
+
+        private void EditarEmpresa(int id)
+        {
+            using (var form = new Form_editar_empresa(id))
+            {
+                if (form.ShowDialog(this) == DialogResult.OK)
+                {
+                    Helpers.CargarEmpresas(listado_empresas.Grid, null);
+                }
+            }
+        }
+
+        private void EliminarEmpresa(int id)
+        {
+            if (MessageBox.Show(
+                "¿Seguro que querés eliminar esta empresa?",
+                "Confirmar eliminación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                DALEmpresa dal = new DALEmpresa();
+                dal.EliminarEmpresa(id);
+                Helpers.CargarEmpresas(listado_empresas.Grid, null);
+            }
         }
     }
 }

@@ -8,13 +8,13 @@ namespace Integrador
     {
         private readonly int _idProducto;
 
-       
+
         public Form_editar_producto(int idProducto)
         {
             InitializeComponent();
             _idProducto = idProducto;
 
-          
+
             this.Load += Form_editar_producto_Load;
         }
 
@@ -32,7 +32,7 @@ namespace Integrador
                     return;
                 }
 
-               
+
                 input_producto_nombre.Text = p.Nombre;
                 input_producto_descripcion.Text = p.Descripcion;
                 input_producto_precioCosto.Text = p.PrecioCosto.ToString("0.00");
@@ -90,14 +90,14 @@ namespace Integrador
                     return;
                 }
 
-             
+
                 decimal precioBruto = precioCosto + (decimal)margen;
                 decimal precioVenta = precioBruto + (decimal)iva;
 
                 input_producto_precioBruto.Text = precioBruto.ToString("0.00");
                 input_producto_precioVenta.Text = precioVenta.ToString("0.00");
 
-               
+
                 Producto p = new Producto(
                     _idProducto,
                     input_producto_nombre.Text.ToUpper(),

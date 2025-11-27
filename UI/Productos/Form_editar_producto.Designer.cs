@@ -1,7 +1,6 @@
 ﻿namespace Integrador
 {
     partial class Form_editar_producto
-
     {
         /// <summary>
         /// Required designer variable.
@@ -51,11 +50,9 @@
             input_producto_proveedor = new TextBox();
             select_producto_categoria = new ComboBox();
             select_producto_subCategoria = new ComboBox();
-            image_producto = new PictureBox();
             button_cancelar = new Button();
             button_reset = new Button();
             button_guardar = new Button();
-            ((System.ComponentModel.ISupportInitialize)image_producto).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -64,7 +61,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(12, 16);
+            label1.Location = new Point(36, 9);
             label1.Name = "label1";
             label1.Size = new Size(194, 32);
             label1.TabIndex = 0;
@@ -76,7 +73,7 @@
             label_producto_nombre.BackColor = Color.Transparent;
             label_producto_nombre.Font = new Font("Arial Black", 11.25F, FontStyle.Bold);
             label_producto_nombre.ForeColor = Color.White;
-            label_producto_nombre.Location = new Point(282, 87);
+            label_producto_nombre.Location = new Point(39, 84);
             label_producto_nombre.Name = "label_producto_nombre";
             label_producto_nombre.Size = new Size(75, 22);
             label_producto_nombre.TabIndex = 1;
@@ -88,7 +85,7 @@
             label_producto_descripcion.BackColor = Color.Transparent;
             label_producto_descripcion.Font = new Font("Arial Black", 11.25F, FontStyle.Bold);
             label_producto_descripcion.ForeColor = Color.White;
-            label_producto_descripcion.Location = new Point(20, 243);
+            label_producto_descripcion.Location = new Point(40, 227);
             label_producto_descripcion.Name = "label_producto_descripcion";
             label_producto_descripcion.Size = new Size(108, 22);
             label_producto_descripcion.TabIndex = 2;
@@ -100,7 +97,7 @@
             label_producto_precioCosto.BackColor = Color.Transparent;
             label_producto_precioCosto.Font = new Font("Arial Black", 11.25F, FontStyle.Bold);
             label_producto_precioCosto.ForeColor = Color.White;
-            label_producto_precioCosto.Location = new Point(350, 259);
+            label_producto_precioCosto.Location = new Point(37, 384);
             label_producto_precioCosto.Name = "label_producto_precioCosto";
             label_producto_precioCosto.Size = new Size(114, 22);
             label_producto_precioCosto.TabIndex = 3;
@@ -112,7 +109,7 @@
             label_producto_margen.BackColor = Color.Transparent;
             label_producto_margen.Font = new Font("Arial Black", 11.25F, FontStyle.Bold);
             label_producto_margen.ForeColor = Color.White;
-            label_producto_margen.Location = new Point(505, 312);
+            label_producto_margen.Location = new Point(184, 437);
             label_producto_margen.Name = "label_producto_margen";
             label_producto_margen.Size = new Size(71, 22);
             label_producto_margen.TabIndex = 4;
@@ -124,7 +121,7 @@
             label_producto_iva.BackColor = Color.Transparent;
             label_producto_iva.Font = new Font("Arial Black", 11.25F, FontStyle.Bold);
             label_producto_iva.ForeColor = Color.White;
-            label_producto_iva.Location = new Point(353, 312);
+            label_producto_iva.Location = new Point(38, 437);
             label_producto_iva.Name = "label_producto_iva";
             label_producto_iva.Size = new Size(39, 22);
             label_producto_iva.TabIndex = 5;
@@ -136,7 +133,7 @@
             label_producto_precioBruto.BackColor = Color.Transparent;
             label_producto_precioBruto.Font = new Font("Arial Black", 11.25F, FontStyle.Bold);
             label_producto_precioBruto.ForeColor = Color.White;
-            label_producto_precioBruto.Location = new Point(505, 259);
+            label_producto_precioBruto.Location = new Point(184, 384);
             label_producto_precioBruto.Name = "label_producto_precioBruto";
             label_producto_precioBruto.Size = new Size(112, 22);
             label_producto_precioBruto.TabIndex = 6;
@@ -148,7 +145,7 @@
             label_producto_precioVenta.BackColor = Color.Transparent;
             label_producto_precioVenta.Font = new Font("Arial Black", 11.25F, FontStyle.Bold);
             label_producto_precioVenta.ForeColor = Color.White;
-            label_producto_precioVenta.Location = new Point(664, 259);
+            label_producto_precioVenta.Location = new Point(330, 384);
             label_producto_precioVenta.Name = "label_producto_precioVenta";
             label_producto_precioVenta.Size = new Size(114, 22);
             label_producto_precioVenta.TabIndex = 7;
@@ -160,7 +157,7 @@
             label_producto_proveedor.BackColor = Color.Transparent;
             label_producto_proveedor.Font = new Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label_producto_proveedor.ForeColor = Color.White;
-            label_producto_proveedor.Location = new Point(284, 154);
+            label_producto_proveedor.Location = new Point(39, 151);
             label_producto_proveedor.Name = "label_producto_proveedor";
             label_producto_proveedor.Size = new Size(93, 22);
             label_producto_proveedor.TabIndex = 8;
@@ -172,7 +169,7 @@
             label_producto_categoria.BackColor = Color.Transparent;
             label_producto_categoria.Font = new Font("Arial Black", 11.25F, FontStyle.Bold);
             label_producto_categoria.ForeColor = Color.White;
-            label_producto_categoria.Location = new Point(514, 87);
+            label_producto_categoria.Location = new Point(269, 84);
             label_producto_categoria.Name = "label_producto_categoria";
             label_producto_categoria.Size = new Size(91, 22);
             label_producto_categoria.TabIndex = 9;
@@ -184,7 +181,7 @@
             label_producto_subCategoria.BackColor = Color.Transparent;
             label_producto_subCategoria.Font = new Font("Arial Black", 11.25F, FontStyle.Bold);
             label_producto_subCategoria.ForeColor = Color.White;
-            label_producto_subCategoria.Location = new Point(514, 154);
+            label_producto_subCategoria.Location = new Point(269, 151);
             label_producto_subCategoria.Name = "label_producto_subCategoria";
             label_producto_subCategoria.Size = new Size(120, 22);
             label_producto_subCategoria.TabIndex = 10;
@@ -193,7 +190,7 @@
             // input_producto_nombre
             // 
             input_producto_nombre.CharacterCasing = CharacterCasing.Upper;
-            input_producto_nombre.Location = new Point(284, 111);
+            input_producto_nombre.Location = new Point(44, 108);
             input_producto_nombre.Margin = new Padding(5);
             input_producto_nombre.Name = "input_producto_nombre";
             input_producto_nombre.PlaceholderText = "Nombre del producto...";
@@ -203,63 +200,63 @@
             // input_producto_descripcion
             // 
             input_producto_descripcion.CharacterCasing = CharacterCasing.Upper;
-            input_producto_descripcion.Location = new Point(19, 269);
+            input_producto_descripcion.Location = new Point(44, 253);
             input_producto_descripcion.Margin = new Padding(5);
             input_producto_descripcion.Multiline = true;
             input_producto_descripcion.Name = "input_producto_descripcion";
             input_producto_descripcion.PlaceholderText = "Ingrese una descripción del producto...";
-            input_producto_descripcion.Size = new Size(298, 90);
+            input_producto_descripcion.Size = new Size(418, 86);
             input_producto_descripcion.TabIndex = 12;
             // 
             // input_producto_precioCosto
             // 
-            input_producto_precioCosto.Location = new Point(352, 281);
+            input_producto_precioCosto.Location = new Point(42, 406);
             input_producto_precioCosto.Margin = new Padding(5);
             input_producto_precioCosto.Name = "input_producto_precioCosto";
             input_producto_precioCosto.PlaceholderText = "Precio de costo...";
-            input_producto_precioCosto.Size = new Size(133, 23);
+            input_producto_precioCosto.Size = new Size(125, 23);
             input_producto_precioCosto.TabIndex = 13;
             // 
             // input_producto_margen
             // 
-            input_producto_margen.Location = new Point(504, 335);
+            input_producto_margen.Location = new Point(188, 460);
             input_producto_margen.Margin = new Padding(5);
             input_producto_margen.Name = "input_producto_margen";
             input_producto_margen.PlaceholderText = "Margen de ganancia...";
-            input_producto_margen.Size = new Size(133, 23);
+            input_producto_margen.Size = new Size(125, 23);
             input_producto_margen.TabIndex = 14;
             // 
             // input_producto_iva
             // 
-            input_producto_iva.Location = new Point(350, 334);
+            input_producto_iva.Location = new Point(42, 460);
             input_producto_iva.Margin = new Padding(5);
             input_producto_iva.Name = "input_producto_iva";
             input_producto_iva.PlaceholderText = "Porcentaje IVA...";
-            input_producto_iva.Size = new Size(133, 23);
+            input_producto_iva.Size = new Size(125, 23);
             input_producto_iva.TabIndex = 15;
             // 
             // input_producto_precioBruto
             // 
-            input_producto_precioBruto.Location = new Point(504, 281);
+            input_producto_precioBruto.Location = new Point(188, 406);
             input_producto_precioBruto.Margin = new Padding(5);
             input_producto_precioBruto.Name = "input_producto_precioBruto";
             input_producto_precioBruto.PlaceholderText = "Precio bruto...";
-            input_producto_precioBruto.Size = new Size(133, 23);
+            input_producto_precioBruto.Size = new Size(125, 23);
             input_producto_precioBruto.TabIndex = 16;
             // 
             // input_producto_precioVenta
             // 
-            input_producto_precioVenta.Location = new Point(656, 281);
+            input_producto_precioVenta.Location = new Point(334, 406);
             input_producto_precioVenta.Margin = new Padding(5);
             input_producto_precioVenta.Name = "input_producto_precioVenta";
             input_producto_precioVenta.PlaceholderText = "Precio de venta...";
-            input_producto_precioVenta.Size = new Size(133, 23);
+            input_producto_precioVenta.Size = new Size(125, 23);
             input_producto_precioVenta.TabIndex = 17;
             // 
             // input_producto_proveedor
             // 
             input_producto_proveedor.CharacterCasing = CharacterCasing.Upper;
-            input_producto_proveedor.Location = new Point(283, 176);
+            input_producto_proveedor.Location = new Point(43, 173);
             input_producto_proveedor.Margin = new Padding(5);
             input_producto_proveedor.Name = "input_producto_proveedor";
             input_producto_proveedor.PlaceholderText = "Proveedor del producto...";
@@ -270,7 +267,7 @@
             // 
             select_producto_categoria.FormattingEnabled = true;
             select_producto_categoria.Items.AddRange(new object[] { "Categoría A", "Categoría B", "Categoría C" });
-            select_producto_categoria.Location = new Point(514, 110);
+            select_producto_categoria.Location = new Point(274, 107);
             select_producto_categoria.Margin = new Padding(5);
             select_producto_categoria.Name = "select_producto_categoria";
             select_producto_categoria.Size = new Size(188, 23);
@@ -280,21 +277,11 @@
             // 
             select_producto_subCategoria.FormattingEnabled = true;
             select_producto_subCategoria.Items.AddRange(new object[] { "Subcategoría A.A", "Subcategoría A.B", "Subcategoría A.C", "Subcategoría B.B", "Subcategoría B.C", "Subcategoría C.C" });
-            select_producto_subCategoria.Location = new Point(512, 176);
+            select_producto_subCategoria.Location = new Point(272, 173);
             select_producto_subCategoria.Margin = new Padding(5);
             select_producto_subCategoria.Name = "select_producto_subCategoria";
             select_producto_subCategoria.Size = new Size(190, 23);
             select_producto_subCategoria.TabIndex = 20;
-            // 
-            // image_producto
-            // 
-            image_producto.Image = Properties.Resources.Producto_SinFoto;
-            image_producto.Location = new Point(20, 79);
-            image_producto.Name = "image_producto";
-            image_producto.Size = new Size(216, 125);
-            image_producto.SizeMode = PictureBoxSizeMode.Zoom;
-            image_producto.TabIndex = 21;
-            image_producto.TabStop = false;
             // 
             // button_cancelar
             // 
@@ -303,9 +290,9 @@
             button_cancelar.FlatStyle = FlatStyle.Flat;
             button_cancelar.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold);
             button_cancelar.ForeColor = Color.White;
-            button_cancelar.Location = new Point(187, 400);
+            button_cancelar.Location = new Point(42, 543);
             button_cancelar.Name = "button_cancelar";
-            button_cancelar.Size = new Size(90, 35);
+            button_cancelar.Size = new Size(90, 38);
             button_cancelar.TabIndex = 22;
             button_cancelar.Text = "Cancelar";
             button_cancelar.UseVisualStyleBackColor = false;
@@ -318,9 +305,9 @@
             button_reset.FlatStyle = FlatStyle.Flat;
             button_reset.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button_reset.ForeColor = Color.White;
-            button_reset.Location = new Point(380, 400);
+            button_reset.Location = new Point(209, 543);
             button_reset.Name = "button_reset";
-            button_reset.Size = new Size(90, 35);
+            button_reset.Size = new Size(90, 38);
             button_reset.TabIndex = 23;
             button_reset.Text = "Limpiar";
             button_reset.UseVisualStyleBackColor = false;
@@ -333,9 +320,9 @@
             button_guardar.FlatStyle = FlatStyle.Flat;
             button_guardar.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold);
             button_guardar.ForeColor = Color.White;
-            button_guardar.Location = new Point(570, 400);
+            button_guardar.Location = new Point(372, 543);
             button_guardar.Name = "button_guardar";
-            button_guardar.Size = new Size(90, 35);
+            button_guardar.Size = new Size(90, 38);
             button_guardar.TabIndex = 24;
             button_guardar.Text = "Guardar";
             button_guardar.UseVisualStyleBackColor = false;
@@ -346,11 +333,10 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background2;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(507, 629);
             Controls.Add(button_guardar);
             Controls.Add(button_reset);
             Controls.Add(button_cancelar);
-            Controls.Add(image_producto);
             Controls.Add(select_producto_subCategoria);
             Controls.Add(select_producto_categoria);
             Controls.Add(input_producto_proveedor);
@@ -375,8 +361,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form_editar_producto";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Insumos de computación - Agregar nuevo producto";
-            ((System.ComponentModel.ISupportInitialize)image_producto).EndInit();
+            Text = "Insumos de computación - Editar producto";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -404,7 +389,6 @@
         private TextBox input_producto_proveedor;
         private ComboBox select_producto_categoria;
         private ComboBox select_producto_subCategoria;
-        private PictureBox image_producto;
         private Button button_cancelar;
         private Button button_reset;
         private Button button_guardar;
