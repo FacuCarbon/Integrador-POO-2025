@@ -93,6 +93,26 @@ namespace Integrador.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_eye_hidden {
+            get {
+                object obj = ResourceManager.GetObject("Icon_eye_hidden", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_eye_show {
+            get {
+                object obj = ResourceManager.GetObject("Icon_eye_show", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Producto_SinFoto {
             get {
                 object obj = ResourceManager.GetObject("Producto_SinFoto", resourceCulture);

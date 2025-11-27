@@ -1,6 +1,6 @@
 ﻿namespace Integrador
 {
-    partial class Form_vendedor
+    partial class Form_crear_vendedor
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_vendedor));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_crear_vendedor));
             label1 = new Label();
             label_vendedor_nombre = new Label();
             input_vendedor_nombre = new TextBox();
@@ -71,6 +71,7 @@
             // 
             // input_vendedor_nombre
             // 
+            input_vendedor_nombre.CharacterCasing = CharacterCasing.Upper;
             input_vendedor_nombre.Location = new Point(302, 106);
             input_vendedor_nombre.Margin = new Padding(5);
             input_vendedor_nombre.Name = "input_vendedor_nombre";
@@ -80,6 +81,7 @@
             // 
             // input_vendedor_apellido
             // 
+            input_vendedor_apellido.CharacterCasing = CharacterCasing.Upper;
             input_vendedor_apellido.Location = new Point(539, 106);
             input_vendedor_apellido.Margin = new Padding(5);
             input_vendedor_apellido.Name = "input_vendedor_apellido";
@@ -103,6 +105,7 @@
             // 
             input_vendedor_dni.Location = new Point(302, 185);
             input_vendedor_dni.Margin = new Padding(5);
+            input_vendedor_dni.MaxLength = 8;
             input_vendedor_dni.Name = "input_vendedor_dni";
             input_vendedor_dni.PlaceholderText = "Dni del vendedor...";
             input_vendedor_dni.Size = new Size(186, 23);
@@ -139,7 +142,6 @@
             input_vendedor_cuit.Name = "input_vendedor_cuit";
             input_vendedor_cuit.Size = new Size(186, 23);
             input_vendedor_cuit.TabIndex = 18;
-        
             // 
             // image_vendedor
             // 
@@ -196,7 +198,7 @@
             button_cancelar.UseVisualStyleBackColor = false;
             button_cancelar.Click += button_cancelar_Click;
             // 
-            // Form_vendedor
+            // Form_crear_vendedor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -217,7 +219,7 @@
             Controls.Add(label_vendedor_nombre);
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form_vendedor";
+            Name = "Form_crear_vendedor";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Insumos de computación - Agregar nuevo vendedor";
             ((System.ComponentModel.ISupportInitialize)image_vendedor).EndInit();

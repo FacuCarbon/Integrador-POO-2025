@@ -1,6 +1,6 @@
 ﻿namespace Integrador
 {
-    partial class Form_producto
+    partial class Form_crear_producto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_producto));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_crear_producto));
             label1 = new Label();
             label_producto_nombre = new Label();
             label_producto_descripcion = new Label();
@@ -191,6 +191,7 @@
             // 
             // input_producto_nombre
             // 
+            input_producto_nombre.CharacterCasing = CharacterCasing.Upper;
             input_producto_nombre.Location = new Point(284, 111);
             input_producto_nombre.Margin = new Padding(5);
             input_producto_nombre.Name = "input_producto_nombre";
@@ -200,6 +201,7 @@
             // 
             // input_producto_descripcion
             // 
+            input_producto_descripcion.CharacterCasing = CharacterCasing.Upper;
             input_producto_descripcion.Location = new Point(19, 269);
             input_producto_descripcion.Margin = new Padding(5);
             input_producto_descripcion.Multiline = true;
@@ -255,6 +257,7 @@
             // 
             // input_producto_proveedor
             // 
+            input_producto_proveedor.CharacterCasing = CharacterCasing.Upper;
             input_producto_proveedor.Location = new Point(283, 176);
             input_producto_proveedor.Margin = new Padding(5);
             input_producto_proveedor.Name = "input_producto_proveedor";
@@ -337,7 +340,7 @@
             button_guardar.UseVisualStyleBackColor = false;
             button_guardar.Click += button_guardar_producto;
             // 
-            // Form_producto
+            // Form_crear_producto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -369,7 +372,7 @@
             Controls.Add(label_producto_nombre);
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form_producto";
+            Name = "Form_crear_producto";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Insumos de computación - Agregar nuevo producto";
             ((System.ComponentModel.ISupportInitialize)image_producto).EndInit();

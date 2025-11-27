@@ -1,6 +1,6 @@
 ﻿namespace Integrador
 {
-    partial class Login
+    partial class Form_Login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Login));
             input_username = new TextBox();
             label_usuario = new Label();
             label_password = new Label();
