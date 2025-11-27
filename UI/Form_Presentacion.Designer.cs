@@ -30,9 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_principal));
-            menuStrip1 = new MenuStrip();
-            MenuItem_archivo = new ToolStripMenuItem();
-            MenuItem_salir = new ToolStripMenuItem();
             tab_principal = new TabControl();
             tab_productos = new TabPage();
             listado_productos = new Integrador.UI.ListadoBase();
@@ -43,35 +40,15 @@
             tab_empresas = new TabPage();
             listado_empresas = new Integrador.UI.ListadoBase();
             imageList1 = new ImageList(components);
-            menuStrip1.SuspendLayout();
+            MenuItem_archivo = new ToolStripMenuItem();
+            menuStrip1 = new MenuStrip();
             tab_principal.SuspendLayout();
             tab_productos.SuspendLayout();
             tab_vendedores.SuspendLayout();
             tab_clientes.SuspendLayout();
             tab_empresas.SuspendLayout();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { MenuItem_archivo });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1054, 24);
-            menuStrip1.TabIndex = 0;
-            menuStrip1.Text = "menuStrip1";
-            // 
-            // MenuItem_archivo
-            // 
-            MenuItem_archivo.DropDownItems.AddRange(new ToolStripItem[] { MenuItem_salir });
-            MenuItem_archivo.Name = "MenuItem_archivo";
-            MenuItem_archivo.Size = new Size(12, 20);
-            // 
-            // MenuItem_salir
-            // 
-            MenuItem_salir.Name = "MenuItem_salir";
-            MenuItem_salir.ShortcutKeys = Keys.Alt | Keys.F4;
-            MenuItem_salir.Size = new Size(138, 22);
-            MenuItem_salir.Text = "Salir";
             // 
             // tab_principal
             // 
@@ -197,6 +174,20 @@
             imageList1.Images.SetKeyName(2, "Clientes.ico");
             imageList1.Images.SetKeyName(3, "Empresas.ico");
             // 
+            // MenuItem_archivo
+            // 
+            MenuItem_archivo.Name = "MenuItem_archivo";
+            MenuItem_archivo.Size = new Size(12, 20);
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { MenuItem_archivo });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1054, 24);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
+            // 
             // Form_principal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -213,22 +204,18 @@
             Text = "Insumos de computación";
             WindowState = FormWindowState.Maximized;
             Load += Form_principal_Load;
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
             tab_principal.ResumeLayout(false);
             tab_productos.ResumeLayout(false);
             tab_vendedores.ResumeLayout(false);
             tab_clientes.ResumeLayout(false);
             tab_empresas.ResumeLayout(false);
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem MenuItem_archivo;
-        private ToolStripMenuItem MenuItem_salir;
         private TabControl tab_principal;
         private TabPage tab_clientes;
         private TabPage tab_empresas;
@@ -239,5 +226,7 @@
         private UI.ListadoBase listado_vendedores;
         private UI.ListadoBase listado_clientes;
         private UI.ListadoBase listado_empresas;
+        private ToolStripMenuItem MenuItem_archivo;
+        private MenuStrip menuStrip1;
     }
 }
